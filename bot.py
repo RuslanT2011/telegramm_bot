@@ -1,7 +1,7 @@
 import telebot
 import time, threading, schedule
 from Kodland import gen_pass
-bot = telebot.TeleBot("8087031842:AAHAZSD2mdwU4rYc-Cz6egmlJZ3UCHRYOmE")
+bot = telebot.TeleBot("Token")
 
 @bot.message_handler(commands=['help'])
 def send_welcome(message):
@@ -58,6 +58,7 @@ if __name__ == '__main__':
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     bot.reply_to(message, message.text)
+
 
 
 
